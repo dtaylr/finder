@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import UserItem from './UserItem'
-import Spinner from '../Loading/Spinner'
+import Loading from '../Loading'
 // import PropTypes from 'prop-types'
 import GithubContext from '../../context/github/githubContext'
 
@@ -13,7 +13,7 @@ const githubContext = useContext(GithubContext)//initialize
 const {loading, users} = githubContext;
 
     if(loading){
-        return <Spinner/>
+        return <Loading/>
     }else{
          return (
             <div style={userStyle}>

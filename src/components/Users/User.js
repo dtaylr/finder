@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment, useContext } from 'react'
-import Spinner from '../Loading/Spinner';
+import Loading from '../Loading';
 // import PropTypes from 'prop-types';
 import Repos from '../Repos/Repos'
 import {Link} from 'react-router-dom';
@@ -36,7 +36,7 @@ const User = ({match}) => {
             } = user;
 
             if(loading){
-                return <Spinner/>
+                return <Loading/>
                 }else{
 
         return(
